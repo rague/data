@@ -230,9 +230,9 @@ var Adapter = Ember.Object.extend({
     ```
 
     @method serialize
-    @param {DS.Model} record
+    @param {DS.Snapshot} snapshot
     @param {Object}   options
-    @return {Object} serialized record
+    @return {Object} serialized snapshot
   */
   serialize: function(snapshot, options) {
     return get(snapshot.record, 'store').serializerFor(snapshot.typeKey).serialize(snapshot, options);
